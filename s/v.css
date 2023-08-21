@@ -2,12 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
-  row-gap: 40px;
+  row-gap: 40px
 }
 
 .thumbnail-row {
-  margin-bottom: 8px;
-  position: relative;
+  margin-bottom: 10px;
 }
 
 .thumbnail {
@@ -19,7 +18,7 @@
   grid-template-columns: 50px 1fr;
 }
 
-.profile-picture {
+.channel-picture {
   width: 36px;
   border-radius: 50px;
 }
@@ -42,31 +41,20 @@
   margin-bottom: 4px;
 }
 
-.video-time {
-  position: absolute;
-  color: white;
-  background-color: black;
-  bottom: 8px;
-  right: 5px;
-  padding: 4px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .video-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width:751px) and (max-width:999px) {
+@media (min-width: 751px) and (max-width: 999px) {
   .video-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (min-width:1000px) {
-  .video-grid {
+@media (min-width: 1000px) {
+  .video-grid { 
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

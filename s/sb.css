@@ -1,13 +1,11 @@
 .sidebar {
   position: fixed;
-  background-color: white;
   top: 55px;
   left: 0;
   bottom: 0;
+  background-color: white;
   width: 72px;
-  cursor: pointer;
   padding-top: 5px;
-  z-index: 200;
 }
 
 .sidebar-link {
@@ -15,7 +13,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 74px
+  height: 74px;
+  cursor: pointer;
 }
 
 .sidebar-link img {
@@ -28,5 +27,5 @@
 }
 
 .sidebar-link:hover {
-  background-color: rgb(235, 235, 235);
+  background-color: lightgray;
 }
