@@ -3,19 +3,19 @@
   top: 55px;
   left: 0;
   bottom: 0;
-  background-color: white;
-  padding-top: 5px;
-  z-index: 100;
   width: 72px;
-  cursor: pointer;
+  padding-top: 5px;
+  background-color: white;
+  z-index: 200;
 }
 
 .sidebar-link {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 80px;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+  cursor: pointer;
 }
 
 .sidebar-link img {
@@ -28,5 +28,5 @@
 }
 
 .sidebar-link:hover {
-  background-color: rgb(235, 235, 235); 
+  background-color: lightgray;
 }
