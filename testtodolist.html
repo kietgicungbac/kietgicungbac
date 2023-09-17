@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cung dc</title>
+  </head>
+  <body>
+    <p>
+      Test To do list
+    </p>
+    <input placeholder="Todo name" class="js-input">
+    <button onclick="
+    addButton();">
+      Add
+    </button>
+    <p class="js-list"></p>
+
+    <script>
+      const toDo = [];
+
+      function vkl () {
+        let toDohtml = '';
+
+        for (i=0;i<toDo.length;i++) {
+          const todo = toDo[i];
+          const html = `<p>${todo}</p>`;
+          toDohtml += html;
+        }
+        document.querySelector('.js-list')
+          .innerHTML = toDohtml;
+      }
+
+      function addButton () {
+        const inputElement = document.querySelector('.js-input');
+        const name = inputElement.value;
+        toDo.push(name);
+        inputElement.value = '';
+        vkl();
+      }
+
+    </script>
+  </body>
+</html>

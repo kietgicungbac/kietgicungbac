@@ -2,43 +2,79 @@
 <html>
   <head>
     <title>
-      try
+      quên hết
     </title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .subscribe-button {
+        color: white;
+        background-color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 35px;
+      }
+      .is-subscribed {
+        color: black;
+        background-color: rgb(240, 240, 240);
+      }
+
+      .input {
+        padding: 10px;
+        font-size: 15px;
+      }
+      .calculate-button {
+        color: white;
+        background-color: green;
+        padding: 12px 15px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+      }
+
+    </style>
   </head>
   <body>
-    <p>
-      Youtube Subscribe Button
+    <p class="title">
+      YouTube Subscribe Button
     </p>
     <button onclick="
     subscribe();"
-    class="js-button">
+    class="js-subscribe-button subscribe-button">
       Subscribe
     </button>
 
     <p>
       Amazon Shipping Calculator
     </p>
-    <input placeholder="Cost of order" class="js-input" onkeydown="inputEnter(event)">
+    <input class="js-input input" placeholder="Cost of order" onkeydown="enterInput(event)">
     <button onclick="
-    calculator();">
+    calculator();"
+    class="calculate-button">
       Calculate
     </button>
     <p class="js-total-cost"></p>
 
     <script>
-      function inputEnter (event) {
+      function enterInput (event) {
         if (event.key === 'Enter') {
           calculator();
         }
       }
 
       function subscribe () {
-        const buttonElement = document.querySelector('.js-button');
+        const buttonElement = document.querySelector('.js-subscribe-button');
 
         if (buttonElement.innerText === 'Subscribe') {
           buttonElement.innerHTML = 'Subscribed';
+          buttonElement.classList.add('is-subscribed');
         } else {
           buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
         }
       }
 
@@ -51,7 +87,7 @@
           cost = cost + 10;
         }
         document.querySelector('.js-total-cost')
-          .innerHTML = `$${cost}`; 
+          .innerHTML = `$${cost}`;
       }
     </script>
   </body>
